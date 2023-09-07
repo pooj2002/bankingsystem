@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "name": "Jane Doe",
+      "email": "jane@gmail.com",
+      "contactNumber": "7785432512",
+      "address": "San Diego",
+      "dateOfBirth": "1995-03-04",
+      "ssn": "123498765",
+      "accountType": "savings",
+      "password": "jane@123",
+      "id": 8
+    }
+  ]
+}

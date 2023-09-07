@@ -1,0 +1,12 @@
+{
+  "accounts": [
+    {
+      "accountNumber": 70568127534,
+      "accountType": "savings",
+      "userId": 8,
+      "balance": 0,
+      "transactionHistory": [],
+      "id": 4
+    }
+  ]
+}
