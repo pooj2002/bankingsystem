@@ -12,8 +12,13 @@
       "accountNumber": 73428235438,
       "accountType": "savings",
       "userId": 9,
-      "balance": 0,
-      "transactionHistory": [],
+      "balance": 800,
+      "transactionHistory": [
+        "Deposit of 100 successful",
+        "Withdrawal of 300 successful",
+        "Deposit of 100 successful",
+        "Withdrawal of 200 successful"
+      ],
       "id": 5
     }
   ]
