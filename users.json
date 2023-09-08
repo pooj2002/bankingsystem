@@ -10,6 +10,17 @@
       "accountType": "savings",
       "password": "jane@123",
       "id": 8
+    },
+    {
+      "name": "Neha Sarnaik",
+      "email": "neha@gmail.com",
+      "contactNumber": "7741898386",
+      "address": "Maharashtra",
+      "dateOfBirth": "1111-11-11",
+      "ssn": "111111111",
+      "accountType": "savings",
+      "password": "nehasarnaik95",
+      "id": 9
     }
   ]
 }

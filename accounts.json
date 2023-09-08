@@ -7,6 +7,14 @@
       "balance": 0,
       "transactionHistory": [],
       "id": 4
+    },
+    {
+      "accountNumber": 73428235438,
+      "accountType": "savings",
+      "userId": 9,
+      "balance": 0,
+      "transactionHistory": [],
+      "id": 5
     }
   ]
 }
