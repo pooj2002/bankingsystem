@@ -7,6 +7,14 @@
       "balance": 0,
       "transactionHistory": [],
       "id": 4
+    },
+    {
+      "accountNumber": 48380716681,
+      "accountType": "checking",
+      "userId": 9,
+      "balance": 0,
+      "transactionHistory": [],
+      "id": 5
     }
   ]
 }

@@ -10,6 +10,17 @@
       "accountType": "savings",
       "password": "jane@123",
       "id": 8
+    },
+    {
+      "name": "Sarah",
+      "email": "sarah123@gmail.com",
+      "contactNumber": "7788554433",
+      "address": "Bangalore",
+      "dateOfBirth": "1997-07-08",
+      "ssn": " 987-65-4321",
+      "accountType": "checking",
+      "password": "sarah@123",
+      "id": 9
     }
   ]
 }

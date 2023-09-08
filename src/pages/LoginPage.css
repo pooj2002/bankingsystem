@@ -33,17 +33,30 @@ input[type="password"] {
 
 }
 
-.login-button {
-    display: block;
-    width: 100%;
+.button-container {
+    display: flex; /* Make the buttons flex items */
+    justify-content: space-between; /* Spread the buttons apart horizontally */
+  }
+  
+  .login-button,
+  .btn-primary {
+    width: calc(50% - 5px); /* Adjust the width as needed */
     padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.login-button:hover {
+    text-align: center;
+  }
+  
+  .login-button:hover,
+  .btn-primary:hover {
     background-color: #0056b3;
-}
+  }
+  
+  
+  
+  
+  
+  
