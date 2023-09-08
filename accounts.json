@@ -1,0 +1,20 @@
+{
+  "accounts": [
+    {
+      "accountNumber": 70568127534,
+      "accountType": "savings",
+      "userId": 8,
+      "balance": 0,
+      "transactionHistory": [],
+      "id": 4
+    },
+    {
+      "accountNumber": 48380716681,
+      "accountType": "checking",
+      "userId": 9,
+      "balance": 0,
+      "transactionHistory": [],
+      "id": 5
+    }
+  ]
+}

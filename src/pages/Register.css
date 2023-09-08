@@ -1,0 +1,10 @@
+.register-container {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px;
+    padding-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+}
