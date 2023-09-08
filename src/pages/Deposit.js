@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function Deposit(props) {
+export default function Deposit() {
+  const id = sessionStorage.getItem("id");
+  console.log(id);
   const [bal, setBal] = React.useState(0);
   const [account, setAccount] = React.useState(null);
 
@@ -21,7 +23,7 @@ export default function Deposit(props) {
   const loadAccount = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4005/accounts?userId=" + props.id
+        "http://localhost:4005/accounts?userId=" + id
       );
       setAccount(response.data[0]);
     } catch (error) {
@@ -84,6 +86,10 @@ export default function Deposit(props) {
             <button type="submit" className="btn btn-outline-primary">
               Submit
             </button>
+            &nbsp;&nbsp;
+            <Link className="btn btn-outline-primary" to="/dashboard">
+              Back
+            </Link>
           </form>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
 
 function App() {
+  const id = sessionStorage.getItem("id");
   return (
     <div className="App">
       <Router>
@@ -18,9 +19,9 @@ function App() {
 
           <Route path="/login" element={<LoginPage />} />
           {/*Should add dashboard component*/}
-          <Route path="/dashboard" element={<Dashboard id="9"></Dashboard>} />
-          <Route path="/dashboard/deposit" element={<Deposit id="9" />} />
-          <Route path="/dashboard/withdraw" element={<Withdraw id="9" />} />
+          <Route path="/dashboard" element={<Dashboard></Dashboard>} />
+          <Route path="/dashboard/deposit" element={<Deposit />} />
+          <Route path="/dashboard/withdraw" element={<Withdraw />} />
         </Routes>
       </Router>
     </div>

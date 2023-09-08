@@ -2,20 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
-export default function Dashboard(props) {
+export default function Dashboard() {
   const [user, setUsers] = useState([]);
   const [account, setAccount] = useState([]);
   const [data, setData] = useState(null);
-  let id;
+  const id = sessionStorage.getItem("id");
+  let navigate = useNavigate();
   useEffect(() => {
     loadUsers();
   }, []);
   const loadUsers = async () => {
-    const result = await axios.get(
-      "http://localhost:4000/users?id=" + props.id
-    );
+    const result = await axios.get("http://localhost:4000/users?id=" + id);
     setData(result.data);
     const root = ReactDOM.createRoot(document.getElementById("namediv"));
     const ele = (
@@ -29,7 +28,7 @@ export default function Dashboard(props) {
   const handleTransHistoryClick = async () => {
     try {
       const account = await axios.get(
-        "http://localhost:4005/accounts?userId=" + props.id
+        "http://localhost:4005/accounts?userId=" + id
       );
       setAccount(account);
       console.log(account);
@@ -51,12 +50,10 @@ export default function Dashboard(props) {
   };
   const handleAccDetailsClick = async () => {
     try {
-      const user = await axios.get(
-        "http://localhost:4000/users?id=" + props.id
-      );
+      const user = await axios.get("http://localhost:4000/users?id=" + id);
       setData(user);
       const account = await axios.get(
-        "http://localhost:4005/accounts?userId=" + props.id
+        "http://localhost:4005/accounts?userId=" + id
       );
       setAccount(account);
       const root = ReactDOM.createRoot(document.getElementById("myData"));
@@ -74,6 +71,15 @@ export default function Dashboard(props) {
       console.log(err.message);
     }
   };
+
+  const handleLogout = () => {
+    // Clear the session storage
+    sessionStorage.removeItem("id");
+
+    // Redirect to the login page
+    navigate("/login");
+  };
+
   return (
     <>
       <div className="py-4">
@@ -132,6 +138,9 @@ export default function Dashboard(props) {
             >
               Withdraw
             </Link>
+            <button className="btn btn-danger" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         </div>
       </div>

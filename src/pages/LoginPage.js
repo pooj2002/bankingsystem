@@ -32,6 +32,7 @@ function LoginPage() {
       console.log(response.data);
       if (response.data.length === 1) {
         // Successfully logged in
+        sessionStorage.setItem("id", JSON.stringify(response.data[0].id));
         navigate("/dashboard");
       } else {
         // Invalid credentials

@@ -5,7 +5,10 @@
       "accountType": "savings",
       "userId": 8,
       "balance": 0,
-      "transactionHistory": [],
+      "transactionHistory": [
+        "Withdrawal of 100 successful",
+        "Deposit of 100 successful"
+      ],
       "id": 4
     },
     {
@@ -17,7 +20,17 @@
         "Deposit of 100 successful",
         "Withdrawal of 300 successful",
         "Deposit of 100 successful",
-        "Withdrawal of 200 successful"
+        "Withdrawal of 200 successful",
+        "Deposit of 100 successful",
+        "Deposit of 100 successful",
+        "Withdrawal of 200 successful",
+        "Deposit of 100 successful",
+        "Withdrawal of 200 successful",
+        "Withdrawal of 200 successful",
+        "Deposit of 200 successful",
+        "Deposit of 100 successful",
+        "Withdrawal of 100 successful",
+        "Deposit of 100 successful"
       ],
       "id": 5
     }
