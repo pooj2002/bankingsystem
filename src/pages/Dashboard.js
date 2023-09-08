@@ -31,16 +31,27 @@ export default function Dashboard() {
         "http://localhost:4005/accounts?userId=" + id
       );
       setAccount(account);
-      console.log(account);
+      //console.log(account);
       const root = ReactDOM.createRoot(document.getElementById("myData"));
       root.render(<p></p>);
-
+      console.log(account);
       const element = (
-        <div class="container" style={{ textAlign: "left" }}>
-          <h4>
-            Transaction history:{" "}
-            {JSON.stringify(account.data[0].transactionHistory)}
-          </h4>
+        <div className="container" style={{ textAlign: "left" }}>
+          <h2>Transaction History</h2>
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Transaction</th>
+              </tr>
+            </thead>
+            <tbody>
+              {account.data[0].transactionHistory.map((transaction, index) => (
+                <tr key={index}>
+                  <td>{transaction}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       );
       root.render(element);
