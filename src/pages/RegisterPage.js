@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Register.css";
 
 export default function RegisterPage() {
   const [user, setUser] = useState({
@@ -74,7 +75,8 @@ export default function RegisterPage() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        {/*  <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">*/}
+        <div className="register-container">
           <h2 className="text-center text-primary">Register Users</h2>
           <form onSubmit={onSubmit}>
             <div className="mb-3">
